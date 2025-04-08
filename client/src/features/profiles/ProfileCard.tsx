@@ -18,11 +18,11 @@ export default function ProfileCard({ profile }: Props) {
                 <CardMedia
                     component="img"
                     src={profile?.imageUrl || '/images/user.png'}
-                    sx={{ width: 200, zIndex: 50 }}
+                    sx={{ width: '100%', zIndex: 50 }}
                     alt={profile.displayName + ' image'}
                 />
                 <CardContent>
-                    <Box display="flex" flexDirection="column" gap={1}>
+                    <Box display='flex' flexDirection='column' gap={1}>
                         <Typography variant="h5">{profile.displayName}</Typography>
                         {profile.bio && (
                             <Typography
@@ -42,9 +42,9 @@ export default function ProfileCard({ profile }: Props) {
                     </Box>
                 </CardContent>
                 <Divider sx={{ mb: 2 }} />
-                <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'start'}}>
+                <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'start' }}>
                     <Person />
-                    <Typography sx={{ml: 1}}>20 Followers</Typography>
+                    <Typography sx={{ ml: 1 }}>20 Followers</Typography>
                 </Box>
             </Card>
         </Link>
